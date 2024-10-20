@@ -6,6 +6,7 @@ const App = () => {
     const [pdfFile1, setPdfFile1] = useState<File | null>(null);
     const [pdfFile2, setPdfFile2] = useState<File | null>(null);
     const [pdfFile3, setPdfFile3] = useState<File | null>(null);
+    const [token, setToken] = useState('');
 
     // Handle file change for each form
     const handleFileChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,12 +35,18 @@ const App = () => {
         formData.append('file', file);
 
         try {
+            const resp = await fetch('http://localhost:8000/api/csrf_token/');
+            const data = await resp.json();
+            setToken(data.token);
             const response = await fetch('http://localhost:8000/api/', {
                 method: 'POST',
                 body: formData,
+                headers: {
+                    "X-CSRFToken": token,
+                },
             });
 
-            if (response.ok) {
+            if (response.status === 200) {
                 const result = await response.json();
                 alert(`File ${fileNumber} uploaded: ${result.message}`);
             } else {
