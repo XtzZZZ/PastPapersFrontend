@@ -1,0 +1,23 @@
+.kkk {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+.upload-ctr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.purpose-span {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
