@@ -30,7 +30,7 @@ const Home = () => {
             data.append('file1', pdf1);
             data.append('file2', pdf2);
             data.append('file3', pdf3);
-            const response = await fetch('http://localhost:8000/api/', {
+            const response = await fetch('http://localhost:8000/api/upload/', {
                 method: 'POST',
                 body: data
             })
