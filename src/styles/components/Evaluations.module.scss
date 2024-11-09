@@ -1,0 +1,9 @@
+@use "src/styles/variables" as *;
+
+.evaluations_ctr {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(6, 1fr);
+  grid-row-gap: 250px;
+  grid-column-gap: 50px;
+}

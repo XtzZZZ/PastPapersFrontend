@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&&display=swap');
+
+$background: #141414  ;
+$orange : #CD7B00;
+$purple : #7A2FDA;
+$white : rgba(255,255,255,.75);
+$lightgreen: #85C300;
+
+
+@mixin font-family{
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+@mixin h1 {
+  @include font-family;
+  font-size: 64px;
+}
+
+@mixin h2 {
+  @include font-family;
+  font-size: 48px;
+}
+
+@mixin h3 {
+  @include font-family;
+  font-size: 40px;
+}
+
+@mixin h4 {
+  @include font-family;
+  font-size: 32px;
+}
+
+@mixin h5 {
+  @include font-family;
+  font-size: 24px;
+}
+
+@mixin h6 {
+  @include font-family;
+  font-size: 20px;
+}
+
+@mixin h7 {
+  @include font-family;
+  font-size: 16px;
+}
+
+@mixin h8 {
+  @include font-family;
+  font-size: 12px;
+}
+
+
+
