@@ -1,3 +1,5 @@
+import styles from "@styles/components/QuestionEvaluation.module.scss";
+
 export interface IQuestionEvaluationProps {
     question: string;
     notes: string[];
@@ -6,17 +8,17 @@ export interface IQuestionEvaluationProps {
 
 export default function QuestionEvaluation(props: IQuestionEvaluationProps) {
     return (
-        <div>
-            <span>
+        <div className={styles.feedback_ctr}>
+            <span className={styles.feedback_span}>
                 {props.question}
             </span>
-            <div>
+            <div className={styles.feedback_marking_ctr}>
                 {props.notes.map((note, i) => {
-                    return(<span key={i}>{note}</span>)
+                    return(<span key={i}>{note}<br/><br/></span>)
                 })}
             </div>
-            <span>
-                {props.marks}
+            <span className={styles.feedback_span}>
+                Marks awarded: {props.marks}
             </span>
         </div>
     );

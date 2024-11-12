@@ -4,20 +4,20 @@
 
 }
 
-.input-container {
+.input_ctr {
     display: flex;
     flex-direction: row;
     gap: 7rem;
 }
 
-.upload-ctr {
+.upload_ctr {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.purpose-span {
+.purpose_span {
     display: inline-block;
     margin-bottom: 0.5rem;
 }

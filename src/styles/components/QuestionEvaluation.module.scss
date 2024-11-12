@@ -1,0 +1,20 @@
+@use "src/styles/variables" as *;
+
+.feedback_ctr {
+  border: 1px $orange solid;
+  margin-top: 50px;
+}
+
+.feedback_marking_ctr {
+  padding: 10px;
+  @include h7;
+}
+
+.feedback_span {
+  display: flex;
+  border: 1px $orange solid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  @include h5;
+}

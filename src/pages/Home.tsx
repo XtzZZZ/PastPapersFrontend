@@ -1,5 +1,5 @@
 import React, {ChangeEvent, useState} from 'react'
-import '../styles/Home.scss'
+import styles from '@styles/pages/Home.module.scss'
 import Evaluations from "../components/Evaluations.tsx";
 
 const Home = () => {
@@ -53,13 +53,13 @@ const Home = () => {
         <div className="App">
             <form onSubmit={handleSubmit} className="kkk">
                 <label>Upload PDFs:</label>
-                <div className="input-container">
-                    <div className="upload-ctr">
-                        <span className="purpose-span">Mark scheme</span>
+                <div className={styles.input_ctr}>
+                    <div className={styles.upload_ctr}>
+                        <span className={styles.purpose_span}>Mark scheme</span>
                         <input type="file" accept="application/pdf" onChange={(e) => handleChange(e, 1)}/>
                     </div>
-                    <div className="upload-ctr">
-                        <span className="purpose-span">Student's answers</span>
+                    <div className={styles.upload_ctr}>
+                        <span className={styles.purpose_span}>Student's answers</span>
                         <input type="file" accept="application/pdf" onChange={(e) => handleChange(e, 2)}/>
                     </div>
                 </div>
